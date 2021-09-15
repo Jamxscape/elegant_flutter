@@ -1,10 +1,11 @@
-import 'package:elegant_flutter/navigation/navigation_page.dart';
-import 'package:elegant_flutter/picker/picker_page.dart';
 import 'package:flutter/material.dart';
 
-/// 主页面
-class HomePage extends StatelessWidget {
-  HomePage({
+import 'default_image_picker_page.dart';
+import 'flutter_image_picker_page.dart';
+
+/// 各种各样的图片选择框
+class ImagePickerPage extends StatelessWidget {
+  ImagePickerPage({
     Key? key,
   }) : super(key: key);
 
@@ -12,18 +13,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("主页"),
+        title: Text("选择框"),
       ),
       body: Container(
           child: ListView(
         children: [
           ListTile(
-            title: Text('导航栏'),
+            title: Text('默认图片选择框，包含筛选图片'),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {
-                // 目标页面，即一个 Widget
-                return NavigationPage();
+                return DefaultImagePickerPage(
+                  title: "默认选择框",
+                );
               }),
             ),
           ),
@@ -31,13 +33,15 @@ class HomePage extends StatelessWidget {
             height: 0.0,
             indent: 0.0,
             color: Colors.black26,
-          ), //---分割线的添加Divider()控件---
+          ),
           ListTile(
-            title: Text('选择框'),
+            title: Text('单张图片选择框'),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {
-                return PickerPage();
+                return FlutterImagePickerPage(
+                  title: "单张图片选择框",
+                );
               }),
             ),
           ),
