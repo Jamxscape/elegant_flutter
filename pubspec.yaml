@@ -40,6 +40,16 @@ dependencies:
       url: https://github.com/godaangel/flutter_crop_box.git
   exif: ^2.1.0
 
+  # ping 
+  dart_ping: ^6.1.1 
+
+  # 指南针
+  flutter_compass: ^0.7.0
+
+  # 权限
+  permission_handler: ^6.0.1
+  get: ^4.3.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -85,3 +95,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  assets:
+    - assets/

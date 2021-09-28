@@ -1,4 +1,6 @@
+import 'package:elegant_flutter/hardware/hardware_page.dart';
 import 'package:elegant_flutter/navigation/navigation_page.dart';
+import 'package:elegant_flutter/network/network_page.dart';
 import 'package:elegant_flutter/picker/picker_page.dart';
 import 'package:flutter/material.dart';
 
@@ -38,6 +40,34 @@ class HomePage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return PickerPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ), //---分割线的添加Divider()控件---
+          ListTile(
+            title: Text('网络'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return NetworkPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ), //---分割线的添加Divider()控件---
+          ListTile(
+            title: Text('硬件'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return HardwarePage();
               }),
             ),
           ),
