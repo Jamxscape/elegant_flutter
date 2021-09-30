@@ -1,3 +1,4 @@
+import 'package:elegant_flutter/dialog/dialog_page.dart';
 import 'package:elegant_flutter/hardware/hardware_page.dart';
 import 'package:elegant_flutter/navigation/navigation_page.dart';
 import 'package:elegant_flutter/network/network_page.dart';
@@ -68,6 +69,20 @@ class HomePage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return HardwarePage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('弹窗'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return DialogPage();
               }),
             ),
           ),
