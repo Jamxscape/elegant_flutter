@@ -21,7 +21,7 @@ class TextFieldPage extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {
-                return SearchBar();
+                return SearchBarTestView();
               }),
             ),
           ),

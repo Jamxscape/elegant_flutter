@@ -1,3 +1,4 @@
+import 'package:elegant_flutter/navigation/tab_bar/tab_bar_page.dart';
 import 'package:flutter/material.dart';
 
 /// 各种各样的导航栏
@@ -14,7 +15,22 @@ class NavigationPage extends StatelessWidget {
       ),
       body: Container(
           child: ListView(
-        children: [],
+        children: [
+          ListTile(
+            title: Text('顶部导航栏'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return TabBarPageTestView();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+        ],
       )),
     );
   }

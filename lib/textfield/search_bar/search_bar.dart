@@ -9,7 +9,13 @@ class CandidateWords {
 
 /// 各种各样的导航栏
 class SearchBar extends StatefulWidget {
-  SearchBar({Key? key}) : super(key: key);
+  /// 候选词
+  final List<CandidateWords> words;
+
+  /// 输入的提示文字
+  final String hintText;
+  SearchBar({Key? key, required this.words, required this.hintText})
+      : super(key: key);
 
   @override
   _SearchBarState createState() => _SearchBarState();
@@ -20,21 +26,6 @@ class _SearchBarState extends State<SearchBar> {
   TextEditingController editingController2 = TextEditingController();
 
   final duplicateItems = List<String>.generate(10000, (i) => "Item $i");
-
-  List<CandidateWords> words = [
-    CandidateWords("Start"),
-    CandidateWords("Go"),
-    CandidateWords("Drive"),
-    CandidateWords("Sleep"),
-    CandidateWords("double"),
-    CandidateWords("nice"),
-    CandidateWords("hh"),
-    CandidateWords("你好"),
-    CandidateWords("你的"),
-    CandidateWords("你好啊"),
-    CandidateWords("你好呀"),
-    CandidateWords("你好好"),
-  ];
 
   FocusNode _focusNode = FocusNode();
   SearchBarController controller = SearchBarController();
@@ -53,86 +44,80 @@ class _SearchBarState extends State<SearchBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("搜索"),
-      ),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Container(
-                width: 358,
-                height: 46,
-                child: TextField(
-                  focusNode: _focusNode,
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                  controller: editingController,
-                  //     textAlign: TextAlign.center,  //字体居中
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xFFF8F8F8),
-                    hintText: '输入',
-                    hintStyle: TextStyle(
-                      color: Color(0xFFCCCCCC),
-                      fontSize: 14,
-                    ), //修改颜色
-                  ),
+    return Container(
+      child: Column(
+        children: <Widget>[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: Container(
+              width: 358,
+              height: 46,
+              child: TextField(
+                focusNode: _focusNode,
+                onChanged: (value) {
+                  setState(() {});
+                },
+                controller: editingController,
+                //     textAlign: TextAlign.center,  //字体居中
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Color(0xFFF8F8F8),
+                  hintText: widget.hintText,
+                  hintStyle: TextStyle(
+                    color: Color(0xFFCCCCCC),
+                    fontSize: 14,
+                  ), //修改颜色
                 ),
               ),
             ),
-            SizedBox(height: 5),
-            Obx(() {
-              print('${controller.isFocus}');
-              return SizedBox(
-                height: controller.isFocus.value
-                    ? (editingController.text.isEmpty ? 0 : 120)
-                    : 0,
-                child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: words.length,
-                    itemBuilder: (context, index) {
-                      if (words[index]
-                              .word
-                              .toLowerCase()
-                              .contains(editingController.text) &&
-                          editingController.text.isNotEmpty) {
-                        return candidateTitle(title: words[index].word);
-                      } else {
-                        return Container();
-                      }
-                    }),
-              );
-            }),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Container(
-                width: 358,
-                height: 46,
-                child: TextField(
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                  controller: editingController2,
-                  //     textAlign: TextAlign.center,  //字体居中
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xFFF8F8F8),
-                    hintText: '输入',
-                    hintStyle: TextStyle(
-                      color: Color(0xFFCCCCCC),
-                      fontSize: 14,
-                    ), //修改颜色
-                    // contentPadding: EdgeInsets.all(14.5), // 输入框的上下宽度
-                  ),
+          ),
+          SizedBox(height: 5),
+          Obx(() {
+            print('${controller.isFocus}');
+            return SizedBox(
+              height: controller.isFocus.value
+                  ? (editingController.text.isEmpty ? 0 : 120)
+                  : 0,
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: widget.words.length,
+                  itemBuilder: (context, index) {
+                    if (widget.words[index].word
+                            .toLowerCase()
+                            .contains(editingController.text) &&
+                        editingController.text.isNotEmpty) {
+                      return candidateTitle(title: widget.words[index].word);
+                    } else {
+                      return Container();
+                    }
+                  }),
+            );
+          }),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: Container(
+              width: 358,
+              height: 46,
+              child: TextField(
+                onChanged: (value) {
+                  setState(() {});
+                },
+                controller: editingController2,
+                //     textAlign: TextAlign.center,  //字体居中
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Color(0xFFF8F8F8),
+                  hintText: '输入',
+                  hintStyle: TextStyle(
+                    color: Color(0xFFCCCCCC),
+                    fontSize: 14,
+                  ), //修改颜色
+                  // contentPadding: EdgeInsets.all(14.5), // 输入框的上下宽度
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -176,6 +161,36 @@ class _SearchBarState extends State<SearchBar> {
           color: Colors.black26,
         ),
       ],
+    );
+  }
+}
+
+class SearchBarTestView extends StatelessWidget {
+  List<CandidateWords> words = [
+    CandidateWords("Start"),
+    CandidateWords("Go"),
+    CandidateWords("Drive"),
+    CandidateWords("Sleep"),
+    CandidateWords("double"),
+    CandidateWords("nice"),
+    CandidateWords("hh"),
+    CandidateWords("你好"),
+    CandidateWords("你的"),
+    CandidateWords("你好啊"),
+    CandidateWords("你好呀"),
+    CandidateWords("你好好"),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("搜索"),
+      ),
+      body: SearchBar(
+        words: words,
+        hintText: "输入",
+      ),
     );
   }
 }
