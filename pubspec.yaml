@@ -53,6 +53,8 @@ dependencies:
   # 弹窗
   flutter_custom_dialog: ^1.1.0
   dio: ^4.0.0
+  # 富文本编辑
+  zefyr : ^1.0-dev
 
 
 dev_dependencies:

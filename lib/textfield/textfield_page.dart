@@ -1,6 +1,8 @@
 import 'package:elegant_flutter/textfield/search_bar/search_bar.dart';
 import 'package:flutter/material.dart';
 
+import 'multiple_text/rich_text_editor_page.dart';
+
 /// 文本框
 class TextFieldPage extends StatelessWidget {
   TextFieldPage({
@@ -22,6 +24,20 @@ class TextFieldPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return SearchBarTestView();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('富文本框'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return EditorPage();
               }),
             ),
           ),

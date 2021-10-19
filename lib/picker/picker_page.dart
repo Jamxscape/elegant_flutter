@@ -30,6 +30,20 @@ class PickerPage extends StatelessWidget {
             indent: 0.0,
             color: Colors.black26,
           ),
+          ListTile(
+            title: Text('文件选择框'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return ImagePickerPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
         ],
       )),
     );
