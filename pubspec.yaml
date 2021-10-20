@@ -54,8 +54,17 @@ dependencies:
   flutter_custom_dialog: ^1.1.0
   dio: ^4.0.0
   # 富文本编辑
-  zefyr : ^1.0-dev
-
+  # 特定版本和特定版本下某个文件夹下的
+  zefyr: 
+    git:
+        url: git://github.com/memspace/zefyr.git
+        path: packages/zefyr
+        ref: 1.0-dev
+  notustohtml: ^0.0.8
+  
+        
+dependency_overrides:
+  quill_delta: ^3.0.0-nullsafety.1
 
 dev_dependencies:
   flutter_test:

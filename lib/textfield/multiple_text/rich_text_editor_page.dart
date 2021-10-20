@@ -1,7 +1,10 @@
+/// 不能转成HTML
 import 'dart:convert';
 
+import 'package:elegant_flutter/textfield/multiple_text/rich_text_display_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:notustohtml/notustohtml.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:zefyr/zefyr.dart';
 
@@ -11,13 +14,39 @@ class EditorPage extends StatefulWidget {
 }
 
 class _EditorPageState extends State<EditorPage> {
-  late ZefyrController _controller;
+  ZefyrController _controller = ZefyrController(NotusDocument()..insert(0, ''));
   final FocusNode _focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildWelcomeEditor(context),
+      appBar: AppBar(
+        title: Text("富文本编辑框"),
+      ),
+      body: Container(
+        child: ListView(
+          children: [
+            SizedBox(
+              height: 500,
+              child: _buildWelcomeEditor(context),
+            ),
+            TextButton(
+              onPressed: () {
+                final converter = NotusHtmlCodec();
+
+                String html = converter.encode(_controller.document.toDelta());
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) {
+                    return RichTextDisplayPage(text: html);
+                  }),
+                );
+              },
+              child: Text("保存"),
+            )
+          ],
+        ),
+      ),
     );
   }
 
@@ -36,18 +65,11 @@ class _EditorPageState extends State<EditorPage> {
               autofocus: true,
               // readOnly: true,
               // padding: EdgeInsets.only(left: 16, right: 16),
-              onLaunchUrl: _launchUrl,
+              // onLaunchUrl: _launchUrl,
             ),
           ),
         ),
       ],
     );
-  }
-
-  void _launchUrl(String url) async {
-    final result = await canLaunch(url);
-    if (result) {
-      await launch(url);
-    }
   }
 }
