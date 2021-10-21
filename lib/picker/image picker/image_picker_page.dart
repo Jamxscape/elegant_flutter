@@ -1,4 +1,5 @@
 import 'package:elegant_flutter/picker/image%20picker/head%20portrait/head_portrait_image_picker_page.dart';
+import 'package:elegant_flutter/picker/image%20picker/wechat_assets_picker/wechat_assets_picker_page.dart';
 import 'package:flutter/material.dart';
 
 import 'default_image_picker_page.dart';
@@ -57,6 +58,20 @@ class ImagePickerPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return HeadPortraitPickerPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('微信类型的图片选择'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return WechatAssetsPickerPage();
               }),
             ),
           ),

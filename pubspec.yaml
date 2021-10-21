@@ -64,6 +64,9 @@ dependencies:
 
   # 文件选择
   file_picker: ^4.1.5
+
+  # 微信类型的图片选择
+  wechat_assets_picker: ^6.2.2
   
         
 dependency_overrides:
