@@ -1,4 +1,3 @@
-/// 不能转成HTML
 import 'dart:convert';
 
 import 'package:elegant_flutter/textfield/multiple_text/rich_text_display_page.dart';

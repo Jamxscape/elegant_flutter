@@ -17,7 +17,7 @@ class HardwarePage extends StatelessWidget {
           child: ListView(
         children: [
           ListTile(
-            title: Text('自定义弹窗'),
+            title: Text('指南针/罗盘'),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {

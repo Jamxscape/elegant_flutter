@@ -1,3 +1,4 @@
+import 'package:elegant_flutter/picker/file_picker/file_picker.dart';
 import 'package:elegant_flutter/picker/image%20picker/image_picker_page.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class PickerPage extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {
-                return ImagePickerPage();
+                return FilePickerDemo();
               }),
             ),
           ),
