@@ -15,7 +15,7 @@ class ImagePickerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("选择框"),
+        title: Text("图片选择框"),
       ),
       body: Container(
           child: ListView(
