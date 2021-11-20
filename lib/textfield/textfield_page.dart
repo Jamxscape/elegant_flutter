@@ -1,3 +1,5 @@
+import 'package:elegant_flutter/textfield/read_only_textfield_page.dart';
+import 'package:elegant_flutter/textfield/rich_text/rich_text_page.dart';
 import 'package:elegant_flutter/textfield/search_bar/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -38,6 +40,34 @@ class TextFieldPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return EditorPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('只读'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return ReadOnlyTextFieldPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('富文本HTML'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return RichTextPage();
               }),
             ),
           ),

@@ -15,7 +15,8 @@ class FlutterImagePickerPage extends StatefulWidget {
 
 class _FlutterImagePickerPageState extends State<FlutterImagePickerPage> {
   bool isVideo = false;
-  String? _retrieveDataError;
+
+  /// String? _retrieveDataError;
   List<XFile>? _imageFileList;
   set _imageFile(XFile? value) {
     _imageFileList = value == null ? null : [value];

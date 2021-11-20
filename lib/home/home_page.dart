@@ -1,5 +1,6 @@
 import 'package:elegant_flutter/dialog/dialog_page.dart';
 import 'package:elegant_flutter/hardware/hardware_page.dart';
+import 'package:elegant_flutter/image/image_page.dart';
 import 'package:elegant_flutter/navigation/navigation_page.dart';
 import 'package:elegant_flutter/network/network_page.dart';
 import 'package:elegant_flutter/picker/picker_page.dart';
@@ -98,6 +99,20 @@ class HomePage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return TextFieldPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('图像'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return ImagePage();
               }),
             ),
           ),

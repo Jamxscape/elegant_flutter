@@ -43,6 +43,11 @@ class _SearchBarState extends State<SearchBar> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
@@ -75,9 +80,10 @@ class _SearchBarState extends State<SearchBar> {
           Obx(() {
             print('${controller.isFocus}');
             return SizedBox(
-              height: controller.isFocus.value
-                  ? (editingController.text.isEmpty ? 0 : 120)
-                  : 0,
+              // height: controller.isFocus.value
+              //     ? (editingController.text.isEmpty ? 0 : 120)
+              //     : 0,
+              height: controller.isFocus.value ? 120 : 0,
               child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: widget.words.length,
@@ -86,6 +92,13 @@ class _SearchBarState extends State<SearchBar> {
                             .toLowerCase()
                             .contains(editingController.text) &&
                         editingController.text.isNotEmpty) {
+                      return candidateTitle(title: widget.words[index].word);
+                    }
+                    if (editingController.text.isEmpty) {
+                      /// 搜索框的时候为
+                      //return Container();
+
+                      /// 选择候选框
                       return candidateTitle(title: widget.words[index].word);
                     } else {
                       return Container();
