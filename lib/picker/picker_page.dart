@@ -2,6 +2,8 @@ import 'package:elegant_flutter/picker/date_picker/date_picker.dart';
 import 'package:elegant_flutter/picker/file_picker/file_picker.dart';
 import 'package:elegant_flutter/picker/image%20picker/image_picker_page.dart';
 import 'package:elegant_flutter/picker/multiple_picker/multiple_picker.dart';
+import 'package:elegant_flutter/picker/record/wechat_record_page.dart';
+import 'package:elegant_flutter/picker/record/wechat_record_test_page.dart';
 import 'package:flutter/material.dart';
 
 /// 各种各样的选择框
@@ -67,6 +69,34 @@ class PickerPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return MultiplePickerPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('录音'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return WeChatRecordScreen();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('录音测试'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return WechatRecordTestPage();
               }),
             ),
           ),

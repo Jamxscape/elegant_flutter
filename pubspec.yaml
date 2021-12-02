@@ -87,6 +87,26 @@ dependencies:
 
   # 富文本编辑器
   html_editor_enhanced: ^2.4.0+1
+
+  # 数据库
+  sqflite: 2.0.0+4
+
+  # 路径
+  path: 1.8.0
+
+  # 通讯录
+  azlistview: ^2.0.0-nullsafety.0
+
+  # 汉字转拼音
+  lpinyin: ^2.0.0
+
+  # 数据库2
+  floor: ^1.2.0
+
+  # 微信类型录音
+  flutter_plugin_record: ^1.0.1
+
+
   
         
 dependency_overrides:
@@ -98,6 +118,9 @@ dependency_overrides:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  floor_generator: ^1.2.0
+  build_runner: ^2.1.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
