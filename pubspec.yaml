@@ -121,11 +121,11 @@ dependencies:
   # 二维码扫描
   flutter_plugin_qrcode: ^1.0.1
 
-  # 原生的二维码扫描
-  qr_flutter: ^4.0.0
+  # # 原生的二维码扫描
+  # qr_flutter: ^4.0.0
 
-  # 集成的多功能条形码扫描
-  ai_barcode: ^3.0.1
+  # 可定制的二维码扫描
+  qr_code_scanner: 0.6.1
 
 dependency_overrides:
   quill_delta: ^3.0.0-nullsafety.1

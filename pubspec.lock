@@ -8,27 +8,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "31.0.0"
-  ai_barcode:
-    dependency: "direct main"
-    description:
-      name: ai_barcode
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "3.0.1"
-  ai_barcode_platform_interface:
-    dependency: transitive
-    description:
-      name: ai_barcode_platform_interface
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "3.0.0"
-  ai_barcode_web:
-    dependency: transitive
-    description:
-      name: ai_barcode_web
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "3.0.0"
   analyzer:
     dependency: transitive
     description:
@@ -860,20 +839,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.0"
-  qr:
-    dependency: transitive
-    description:
-      name: qr
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.1.0"
-  qr_flutter:
+  qr_code_scanner:
     dependency: "direct main"
     description:
-      name: qr_flutter
+      name: qr_code_scanner
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "4.0.0"
+    version: "0.6.1"
   quill_delta:
     dependency: "direct overridden"
     description:
@@ -1047,27 +1019,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.3.1"
-  universal_html:
-    dependency: transitive
-    description:
-      name: universal_html
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.0.8"
-  universal_io:
-    dependency: transitive
-    description:
-      name: universal_io
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.0.4"
-  universal_platform:
-    dependency: transitive
-    description:
-      name: universal_platform
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "1.0.0+1"
   url_launcher:
     dependency: transitive
     description:
