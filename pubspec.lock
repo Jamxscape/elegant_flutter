@@ -8,6 +8,27 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "31.0.0"
+  ai_barcode:
+    dependency: "direct main"
+    description:
+      name: ai_barcode
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.1"
+  ai_barcode_platform_interface:
+    dependency: transitive
+    description:
+      name: ai_barcode_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.0"
+  ai_barcode_web:
+    dependency: transitive
+    description:
+      name: ai_barcode_web
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.0"
   analyzer:
     dependency: transitive
     description:
@@ -99,6 +120,29 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "8.1.3"
+  camera:
+    dependency: "direct overridden"
+    description:
+      path: "packages/camera/camera"
+      ref: "9e46048ad2e1f085c1e8f6c77391fa52025e681f"
+      resolved-ref: "9e46048ad2e1f085c1e8f6c77391fa52025e681f"
+      url: "https://github.com/flutter/plugins"
+    source: git
+    version: "0.9.4+2"
+  camera_platform_interface:
+    dependency: transitive
+    description:
+      name: camera_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.1.1"
+  camera_web:
+    dependency: transitive
+    description:
+      name: camera_web
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.1+1"
   characters:
     dependency: transitive
     description:
@@ -191,7 +235,7 @@ packages:
       name: csslib
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.16.2"
+    version: "0.17.1"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -249,7 +293,7 @@ packages:
     source: hosted
     version: "2.2.0"
   extended_image:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: extended_image
       url: "https://pub.flutter-io.cn"
@@ -386,6 +430,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.5"
+  flutter_plugin_qrcode:
+    dependency: "direct main"
+    description:
+      name: flutter_plugin_qrcode
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.3"
   flutter_plugin_record:
     dependency: "direct main"
     description:
@@ -446,12 +497,12 @@ packages:
     source: hosted
     version: "2.0.0"
   html:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       name: html
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.14.0+4"
+    version: "0.15.0"
   html_editor_enhanced:
     dependency: "direct main"
     description:
@@ -670,7 +721,7 @@ packages:
     source: hosted
     version: "0.2.1"
   path_provider:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: path_provider
       url: "https://pub.flutter-io.cn"
@@ -809,6 +860,20 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.0"
+  qr:
+    dependency: transitive
+    description:
+      name: qr
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.1.0"
+  qr_flutter:
+    dependency: "direct main"
+    description:
+      name: qr_flutter
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "4.0.0"
   quill_delta:
     dependency: "direct overridden"
     description:
@@ -982,6 +1047,27 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.3.1"
+  universal_html:
+    dependency: transitive
+    description:
+      name: universal_html
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.8"
+  universal_io:
+    dependency: transitive
+    description:
+      name: universal_io
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.4"
+  universal_platform:
+    dependency: transitive
+    description:
+      name: universal_platform
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0+1"
   url_launcher:
     dependency: transitive
     description:
@@ -1073,6 +1159,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.4"
+  video_thumbnail:
+    dependency: "direct main"
+    description:
+      name: video_thumbnail
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.4.3"
   visibility_detector:
     dependency: transitive
     description:
@@ -1108,6 +1201,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "6.2.4"
+  wechat_camera_picker:
+    dependency: "direct main"
+    description:
+      name: wechat_camera_picker
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.6.1"
   win32:
     dependency: transitive
     description:

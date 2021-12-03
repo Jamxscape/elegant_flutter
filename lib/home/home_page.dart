@@ -1,3 +1,4 @@
+import 'package:elegant_flutter/camera/camera_page.dart';
 import 'package:elegant_flutter/dialog/dialog_page.dart';
 import 'package:elegant_flutter/hardware/hardware_page.dart';
 import 'package:elegant_flutter/image/image_page.dart';
@@ -143,6 +144,20 @@ class HomePage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return ListPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('相机'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return CameraPage();
               }),
             ),
           ),

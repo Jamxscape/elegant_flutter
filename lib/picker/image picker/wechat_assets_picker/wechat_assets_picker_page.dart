@@ -1,7 +1,9 @@
 import 'package:elegant_flutter/picker/image%20picker/head%20portrait/head_portrait_image_picker_page.dart';
 import 'package:elegant_flutter/picker/image%20picker/wechat_assets_picker/multiple_wechat_assets_picker_page.dart';
 import 'package:elegant_flutter/picker/image%20picker/wechat_assets_picker/single_wechat_assets_picker_page.dart';
+import 'package:elegant_flutter/picker/image%20picker/wechat_assets_picker/video_thumbnail_page.dart';
 import 'package:elegant_flutter/picker/image%20picker/wechat_assets_picker/wechat_assets_picker_page.dart';
+import 'package:elegant_flutter/picker/image%20picker/wechat_assets_picker/wechat_take_photo_page.dart';
 import 'package:flutter/material.dart';
 
 /// 各种各样的图片选择框
@@ -39,6 +41,34 @@ class WechatAssetsPickerPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return MultipleWechatAssetsPickerPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('微信类型的拍照'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return WechatTakePhotoPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('视频缩略图'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return VideoThumbnailPage();
               }),
             ),
           ),
