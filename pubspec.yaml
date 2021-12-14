@@ -47,7 +47,7 @@ dependencies:
   flutter_compass: ^0.7.0
 
   # 权限
-  permission_handler: ^6.0.1
+  permission_handler: ^8.3.0
   get: ^4.3.8
 
   # 弹窗
@@ -126,6 +126,9 @@ dependencies:
 
   # 可定制的二维码扫描
   qr_code_scanner: 0.6.1
+
+  # 定位
+  geolocator: ^8.0.1
 
 dependency_overrides:
   quill_delta: ^3.0.0-nullsafety.1
