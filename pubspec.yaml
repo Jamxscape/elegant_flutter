@@ -130,6 +130,17 @@ dependencies:
   # 定位
   geolocator: ^8.0.1
 
+  # WiFi
+  wifi_info_flutter: ^2.0.2
+  
+  # 
+  connectivity: ^3.0.6
+
+  # 蓝牙接收
+  flutter_lints: ^1.0.4
+  flutter_reactive_ble: ^5.0.2
+  functional_data: ^1.0.0
+
 dependency_overrides:
   quill_delta: ^3.0.0-nullsafety.1
 
