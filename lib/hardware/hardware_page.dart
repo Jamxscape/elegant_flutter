@@ -1,3 +1,4 @@
+import 'package:elegant_flutter/hardware/bluetooth/bluetooth_data_page.dart';
 import 'package:elegant_flutter/hardware/compass/compass.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,20 @@ class HardwarePage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return CompassPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('蓝牙'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return BluetoothDataPage();
               }),
             ),
           ),
