@@ -1,4 +1,3 @@
-import 'package:elegant_flutter/textfield/search_bar/search_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'multiple_text/rich_text_editor_page.dart';

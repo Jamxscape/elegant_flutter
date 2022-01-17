@@ -1,9 +1,11 @@
-import 'package:elegant_flutter/textfield/read_only_textfield_page.dart';
-import 'package:elegant_flutter/textfield/rich_text/rich_text_page.dart';
-import 'package:elegant_flutter/textfield/search_bar/search_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'multiple_text/rich_text_editor_page.dart';
+import 'numberic_textfield/numberic_textfield_page.dart';
+import 'read_only_textfield_page.dart';
+import 'rich_text/rich_text_page.dart';
+import 'search_bar/search_bar.dart';
+import 'textfield_style/commom_textfield_style.dart';
 
 /// 文本框
 class TextFieldPage extends StatelessWidget {
@@ -15,7 +17,7 @@ class TextFieldPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("导航栏"),
+        title: Text("输入框"),
       ),
       body: Container(
           child: ListView(
@@ -68,6 +70,34 @@ class TextFieldPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) {
                 return RichTextPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('特殊类型输入框'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return NumbericTextFieldPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('常用输入框样式'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return CommonTextfieldStyle();
               }),
             ),
           ),

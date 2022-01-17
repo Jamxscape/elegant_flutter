@@ -8,7 +8,7 @@ import 'package:elegant_flutter/navigation/navigation_page.dart';
 import 'package:elegant_flutter/network/network_page.dart';
 import 'package:elegant_flutter/picker/picker_page.dart';
 import 'package:elegant_flutter/sqlite/sqlite_page.dart';
-import 'package:elegant_flutter/textfield/textfield_page.dart';
+import 'package:elegant_flutter/widget/widget_page.dart';
 import 'package:elegant_flutter/wifi/wifi_page.dart';
 import 'package:flutter/material.dart';
 
@@ -99,11 +99,11 @@ class HomePage extends StatelessWidget {
             color: Colors.black26,
           ),
           ListTile(
-            title: Text('文本框'),
+            title: Text('常用组件'),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {
-                return TextFieldPage();
+                return WidgetPage();
               }),
             ),
           ),
@@ -184,6 +184,20 @@ class HomePage extends StatelessWidget {
           ),
           ListTile(
             title: Text('WiFi'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return WiFiPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('常用组件'),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {

@@ -1,6 +1,6 @@
-import 'package:elegant_flutter/textfield/multiple_text/rich_text_read_only_page.dart';
-import 'package:elegant_flutter/textfield/search_bar/search_bar.dart';
 import 'package:flutter/material.dart';
+
+import 'rich_text_read_only_page.dart';
 
 /// 富文本框的具体内容
 class RichTextDisplayPage extends StatelessWidget {

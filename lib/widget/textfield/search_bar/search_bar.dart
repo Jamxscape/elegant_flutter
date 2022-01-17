@@ -1,6 +1,7 @@
-import 'package:elegant_flutter/textfield/search_bar/search_bar_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'search_bar_controller.dart';
 
 class CandidateWords {
   String word;

@@ -1,9 +1,10 @@
-import 'package:elegant_flutter/location/location_without_network_page.dart';
+import 'package:elegant_flutter/widget/button/button_page.dart';
+import 'package:elegant_flutter/widget/textfield/textfield_page.dart';
 import 'package:flutter/material.dart';
 
-/// 定位
-class LocationPage extends StatelessWidget {
-  LocationPage({
+/// 常用组件
+class WidgetPage extends StatelessWidget {
+  WidgetPage({
     Key? key,
   }) : super(key: key);
 
@@ -11,17 +12,17 @@ class LocationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("定位"),
+        title: Text("常用组件"),
       ),
       body: Container(
           child: ListView(
         children: [
           ListTile(
-            title: Text('获取当前的定位样式（在没有网路的情况下）'),
+            title: Text('文本框'),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {
-                return LocationWithoutNetworkPage();
+                return TextFieldPage();
               }),
             ),
           ),
@@ -29,6 +30,15 @@ class LocationPage extends StatelessWidget {
             height: 0.0,
             indent: 0.0,
             color: Colors.black26,
+          ),
+          ListTile(
+            title: Text('按钮'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return ButtonPage();
+              }),
+            ),
           ),
         ],
       )),

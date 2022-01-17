@@ -1,13 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:elegant_flutter/textfield/multiple_text/rich_text_display_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:notustohtml/notustohtml.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:zefyr/zefyr.dart';
 import 'package:image_picker/image_picker.dart';
+
+import 'rich_text_display_page.dart';
 
 class EditorPage extends StatefulWidget {
   @override
