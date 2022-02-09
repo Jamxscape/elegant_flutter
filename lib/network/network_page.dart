@@ -18,7 +18,7 @@ class NetworkPage extends StatelessWidget {
           child: ListView(
         children: [
           ListTile(
-            title: Text('PING'),
+            title: Text('PING(支持安卓，不支持iOS)'),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {

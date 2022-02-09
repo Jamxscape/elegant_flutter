@@ -8,6 +8,7 @@ import 'package:elegant_flutter/navigation/navigation_page.dart';
 import 'package:elegant_flutter/network/network_page.dart';
 import 'package:elegant_flutter/picker/picker_page.dart';
 import 'package:elegant_flutter/sqlite/sqlite_page.dart';
+import 'package:elegant_flutter/widget/list_title_widget.dart';
 import 'package:elegant_flutter/widget/widget_page.dart';
 import 'package:elegant_flutter/wifi/wifi_page.dart';
 import 'package:flutter/material.dart';
@@ -27,189 +28,15 @@ class HomePage extends StatelessWidget {
       body: Container(
           child: ListView(
         children: [
-          ListTile(
-            title: Text('导航栏'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                // 目标页面，即一个 Widget
-                return NavigationPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ), //---分割线的添加Divider()控件---
-          ListTile(
-            title: Text('选择框'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return PickerPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ), //---分割线的添加Divider()控件---
-          ListTile(
-            title: Text('网络'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return NetworkPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ), //---分割线的添加Divider()控件---
-          ListTile(
-            title: Text('硬件'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return HardwarePage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('弹窗'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return DialogPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('常用组件'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return WidgetPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('图像'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return ImagePage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('SQL'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return SQLitePage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('列表'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return ListPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('相机'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return CameraPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('定位'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return LocationPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('WiFi'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return WiFiPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('常用组件'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return WiFiPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
+          ListTitleWidget(title: '导航栏', pageName: NavigationPage()),
+          ListTitleWidget(title: '选择框', pageName: PickerPage()),
+          ListTitleWidget(title: '网络', pageName: NetworkPage()),
+          ListTitleWidget(title: '硬件', pageName: HardwarePage()),
+          ListTitleWidget(title: '弹窗', pageName: DialogPage()),
+          ListTitleWidget(title: '常用组件', pageName: WidgetPage()),
+          ListTitleWidget(title: '图像', pageName: ImagePage()),
+          ListTitleWidget(title: 'SQL', pageName: SQLitePage()),
+          ListTitleWidget(title: '列表', pageName: ListPage()),
         ],
       )),
     );

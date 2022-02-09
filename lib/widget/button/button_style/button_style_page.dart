@@ -22,6 +22,7 @@ class ButtonStylePage extends StatelessWidget {
               stadiumRectangleButton(),
               knifeButton(),
               roundButton(),
+              ovalShapedButton(),
               continuousButton(),
               circleButton(),
               stadiumBgButton(),
@@ -32,6 +33,10 @@ class ButtonStylePage extends StatelessWidget {
               roundedBgIconRightButton(),
               outlinedIconButton(),
               disableButton(),
+              dropDownButton(),
+              popupMenuButton(),
+              iconButton(),
+              buttonBar(),
             ],
           )),
     );
@@ -165,6 +170,20 @@ class ButtonStylePage extends StatelessWidget {
         side: BorderSide(width: 2.0, color: Colors.red),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+    );
+  }
+
+  /// 椭圆按钮
+  Widget ovalShapedButton() {
+    return OutlinedButton(
+      onPressed: () {},
+      child: Text('椭圆按钮'),
+      style: OutlinedButton.styleFrom(
+        side: BorderSide(width: 1.0, color: Colors.red),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.elliptical(400, 50)),
         ),
       ),
     );
@@ -308,6 +327,98 @@ class ButtonStylePage extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
       ),
+    );
+  }
+
+  /// 下拉选择
+  Widget dropDownButton() {
+    var _dropValue = '语文';
+    return DropdownButton(
+      hint: Text('请选择'),
+      value: _dropValue,
+      items: [
+        DropdownMenuItem(
+          child: Text('语文'),
+          value: '语文',
+        ),
+        DropdownMenuItem(child: Text('数学'), value: '数学'),
+        DropdownMenuItem(child: Text('英语'), value: '英语'),
+      ],
+      onChanged: (value) {},
+    );
+  }
+
+  /// 菜单选中控件
+  Widget popupMenuButton() {
+    return PopupMenuButton<String>(
+      itemBuilder: (context) {
+        return <PopupMenuEntry<String>>[
+          PopupMenuItem<String>(
+            value: '语文',
+            child: Text('语文'),
+          ),
+          PopupMenuItem<String>(
+            value: '数学',
+            child: Text('数学'),
+          ),
+          PopupMenuItem<String>(
+            value: '英语',
+            child: Text('英语'),
+          ),
+          PopupMenuItem<String>(
+            value: '生物',
+            child: Text('生物'),
+          ),
+          PopupMenuItem<String>(
+            value: '化学',
+            child: Text('化学'),
+          ),
+        ];
+      },
+    );
+  }
+
+  /// 单纯的图标按钮
+  Widget iconButton() {
+    return IconButton(
+      tooltip: '图标按钮',
+      icon: Icon(Icons.person),
+      iconSize: 30,
+      color: Colors.red,
+      onPressed: () {},
+    );
+  }
+
+  /// 多个按钮排列
+  Widget buttonBar() {
+    ButtonStyle style = OutlinedButton.styleFrom(
+        side: BorderSide(width: 2.0, color: Colors.grey),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ));
+    return ButtonBar(
+      children: <Widget>[
+        TextButton(
+          onPressed: null,
+          child: Text('1'),
+          style: style,
+        ),
+        TextButton(
+          onPressed: null,
+          child: Text('2'),
+          style: style,
+        ),
+        TextButton(
+          onPressed: null,
+          child: Text('3'),
+          style: style,
+        ),
+        TextButton(
+          onPressed: null,
+          child: Text('4'),
+          style: style,
+        ),
+      ],
     );
   }
 }

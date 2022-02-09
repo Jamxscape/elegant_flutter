@@ -43,6 +43,10 @@ dependencies:
   # ping 
   dart_ping: ^6.1.1 
 
+  dart_ping_ios: ^1.0.0
+
+  flutter_icmp_ping: ^3.0.2
+
   # 指南针
   flutter_compass: ^0.7.0
 
@@ -80,9 +84,6 @@ dependencies:
   # 设备及包详情
   device_info: ^2.0.0
   package_info: ^2.0.0
-
-  # 日期选择
-  flutter_datetime_picker: ^1.5.1
 
   # 多选
   multi_select_flutter: ^4.0.0

@@ -61,15 +61,9 @@ class _TabBarPageState extends State<TabBarPage>
   @override
   Widget build(BuildContext context) {
     for (int i = 0; i < widget.title.length; i++) {
-      if (i == widget.title.length - 1) {
-        titleTabs.add(
-          tabBarItem(widget.title[i], showRightImage: false),
-        );
-      } else {
-        titleTabs.add(
-          tabBarItem("安卓"),
-        );
-      }
+      titleTabs.add(
+        tabBarItem(widget.title[i], showRightImage: false),
+      );
     }
     return Column(
       children: [

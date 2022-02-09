@@ -1,4 +1,6 @@
 import 'package:elegant_flutter/widget/button/button_page.dart';
+import 'package:elegant_flutter/widget/chip/chip_page.dart';
+import 'package:elegant_flutter/widget/list_title_widget.dart';
 import 'package:elegant_flutter/widget/textfield/textfield_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,29 +19,9 @@ class WidgetPage extends StatelessWidget {
       body: Container(
           child: ListView(
         children: [
-          ListTile(
-            title: Text('文本框'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return TextFieldPage();
-              }),
-            ),
-          ),
-          Divider(
-            height: 0.0,
-            indent: 0.0,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text('按钮'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) {
-                return ButtonPage();
-              }),
-            ),
-          ),
+          ListTitleWidget(title: '文本框', pageName: TextFieldPage()),
+          ListTitleWidget(title: '按钮', pageName: ButtonPage()),
+          ListTitleWidget(title: '标签选择', pageName: ChipPage()),
         ],
       )),
     );

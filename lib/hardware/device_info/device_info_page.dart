@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:device_info/device_info.dart';
 
-class MyApp extends StatefulWidget {
+class DeviceInfoPage extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _DeviceInfoPageState createState() => _DeviceInfoPageState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _DeviceInfoPageState extends State<DeviceInfoPage> {
   static final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
   Map<String, dynamic> _deviceData = <String, dynamic>{};
 

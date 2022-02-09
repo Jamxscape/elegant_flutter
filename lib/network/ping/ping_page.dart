@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dart_ping/dart_ping.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +13,19 @@ class PingPage extends StatefulWidget {
 
 class _PingPageState extends State<PingPage> {
   final ping = Ping('baidu.com');
-  ValueNotifier<String> pingNum = ValueNotifier('');
+
+  /// 转换成微秒
+  String pingNum = '0';
+
+  /// ping原始数据
+  String pingData = '';
   @override
   initState() {
     ping.stream.listen((PingData event) {
-      pingNum.value = '${event.response?.time?.inMilliseconds}';
+      setState(() {
+        pingNum = '${event.response!.time!.inMicroseconds}';
+        pingData = '$event';
+      });
     });
     super.initState();
   }
@@ -27,11 +37,11 @@ class _PingPageState extends State<PingPage> {
         title: Text("PING"),
       ),
       body: Container(
-        child: ValueListenableBuilder<String>(
-          valueListenable: pingNum,
-          builder: (context, value, child) {
-            return Text(value);
-          },
+        child: Column(
+          children: [
+            Text('$pingNum us'),
+            Text('$pingData'),
+          ],
         ),
       ),
     );
