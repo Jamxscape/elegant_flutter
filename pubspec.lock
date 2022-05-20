@@ -1325,8 +1325,8 @@ packages:
     description:
       path: "packages/zefyr"
       ref: "1.0-dev"
-      resolved-ref: "962a14776d22587ae06f4566015334e72fb0dd63"
-      url: "git://github.com/memspace/zefyr.git"
+      resolved-ref: "28501ab4835883a59c95fcf31d7ec3f2d301c4f7"
+      url: "https://github.com/memspace/zefyr"
     source: git
     version: "1.0.0-dev.2.0"
 sdks:

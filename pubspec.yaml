@@ -61,7 +61,7 @@ dependencies:
   # 特定版本和特定版本下某个文件夹下的
   zefyr: 
     git:
-        url: git://github.com/memspace/zefyr.git
+        url: https://github.com/memspace/zefyr
         path: packages/zefyr
         ref: 1.0-dev
   notustohtml: ^0.0.8

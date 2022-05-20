@@ -1,3 +1,4 @@
+import 'package:elegant_flutter/navigation/bottom_tar_bar/bottom_tar_bar_page.dart';
 import 'package:elegant_flutter/navigation/tab_bar/tab_bar_page.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,22 @@ class NavigationPage extends StatelessWidget {
             indent: 0.0,
             color: Colors.black26,
           ),
+          ListTile(
+            title: Text('底部导航栏'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return BottomTarBarPage();
+              }),
+            ),
+          ),
+          Divider(
+            height: 0.0,
+            indent: 0.0,
+            color: Colors.black26,
+          ),
+
+          /// 侧边导航栏
         ],
       )),
     );
