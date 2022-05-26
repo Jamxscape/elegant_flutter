@@ -32,6 +32,7 @@ class ButtonStylePage extends StatelessWidget {
               roundedBgIconButton(),
               roundedBgIconRightButton(),
               outlinedIconButton(),
+              gradientButton(),
               disableButton(),
               dropDownButton(),
               popupMenuButton(),
@@ -311,6 +312,37 @@ class ButtonStylePage extends StatelessWidget {
         side: BorderSide(width: 2.0, color: Colors.blue),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(32.0),
+        ),
+      ),
+    );
+  }
+
+  /// 渐变色按钮
+  Widget gradientButton() {
+    return ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        elevation: 0,
+        primary: Colors.transparent,
+        shadowColor: Colors.transparent,
+        onPrimary: null,
+        padding: EdgeInsets.all(0),
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.circular(32.0),
+        // ),
+      ),
+      child: Ink(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [Colors.blue, Colors.red]),
+          borderRadius: BorderRadius.all(Radius.circular(32.0)),
+        ),
+        child: Container(
+          constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0),
+          alignment: Alignment.center,
+          child: const Text(
+            '渐变色按钮',
+            textAlign: TextAlign.center,
+          ),
         ),
       ),
     );
